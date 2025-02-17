@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.emmapi.controllers.TypesServiceController">
+
+    <children>
+        <Label layoutX="20.0" layoutY="20.0" text="Gestion des Types de Services" font="$x1">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+
+        <!-- Formulaire pour ajouter un type de service -->
+        <TextField fx:id="typeServiceField" layoutX="20.0" layoutY="60.0" promptText="Type de service" />
+
+        <Button layoutX="20.0" layoutY="100.0" text="Ajouter" onAction="#ajouterTypeService" />
+
+        <!-- Tableau pour afficher les types de services -->
+        <TableView fx:id="typesServiceTable" layoutX="20.0" layoutY="140.0" prefHeight="200.0" prefWidth="560.0">
+            <columns>
+                <TableColumn fx:id="idTypeServiceColumn" prefWidth="100.0" text="ID" />
+                <TableColumn fx:id="typeServiceColumn" prefWidth="460.0" text="Type de service" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

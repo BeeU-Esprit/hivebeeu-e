@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.emmapi.controllers.AfficherAbonnementsAvecServicesController">
+
+    <children>
+        <Label layoutX="20.0" layoutY="20.0" text="Liste des Abonnements avec leurs Services">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+
+        <!-- Tableau pour afficher les abonnements avec leurs services -->
+        <TableView fx:id="abonnementsAvecServicesTable" layoutX="20.0" layoutY="60.0" prefHeight="300.0" prefWidth="560.0">
+            <columns>
+                <TableColumn fx:id="idAbonnementColumn" prefWidth="100.0" text="ID Abonnement" />
+                <TableColumn fx:id="nomAbonnementColumn" prefWidth="150.0" text="Nom Abonnement" />
+                <TableColumn fx:id="nomServiceColumn" prefWidth="310.0" text="Service Associé" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>
