@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import java.net.URL?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="730.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pidev.Controllers.AjoutC">
+    <children>
+        <ImageView fitHeight="730.0" fitWidth="1300.0" layoutX="1.0" layoutY="1.0" pickOnBounds="true" preserveRatio="true">
+            <image>
+                <Image url="@img/yellow-shape-watercolor.jpg" />
+            </image>
+        </ImageView>
+        <!--____________________________________________DASHBOARD__________________________________________________-->
+
+        <Button fx:id="ButtonAccueil" layoutX="61.0" layoutY="38.0" mnemonicParsing="false" onAction="#Home" prefHeight="27.0" prefWidth="34.0" stylesheets="@../java/values/style.css" textFill="WHITE">
+            <styleClass>
+                <String fx:value="transparent" />
+                <String fx:value="shadow2" />
+            </styleClass>
+            <font>
+                <Font name="Calibri Bold" size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="ButtonAjouterP" layoutX="20.0" layoutY="295.0" mnemonicParsing="false" onAction="#ajP" prefHeight="46.0" prefWidth="72.0" stylesheets="@../java/values/style.css" textFill="WHITE">
+            <styleClass>
+                <String fx:value="transparent" />
+                <String fx:value="shadow2" />
+            </styleClass>
+            <font>
+                <Font name="Calibri Bold" size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="ButtonListeP" layoutX="24.0" layoutY="202.0" mnemonicParsing="false" onAction="#listP" prefHeight="46.0" prefWidth="64.0" stylesheets="@../java/values/style.css" textFill="WHITE">
+            <styleClass>
+                <String fx:value="transparent" />
+                <String fx:value="shadow2" />
+            </styleClass>
+            <font>
+                <Font name="Calibri Bold" size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="ButtonListeV" layoutX="21.0" layoutY="386.0" mnemonicParsing="false" onAction="#listV" prefHeight="55.0" prefWidth="72.0" stylesheets="@../java/values/style.css" textFill="WHITE">
+            <styleClass>
+                <String fx:value="transparent" />
+                <String fx:value="shadow2" />
+            </styleClass>
+            <font>
+                <Font name="Calibri Bold" size="18.0" />
+            </font>
+        </Button>
+        <Button fx:id="buttonstatistiqueP" layoutX="18.0" layoutY="480.0" mnemonicParsing="false" onAction="#showStatP" prefHeight="55.0" prefWidth="72.0" stylesheets="@../java/values/style.css" textFill="WHITE">
+            <styleClass>
+                <String fx:value="transparent" />
+                <String fx:value="shadow2" />
+            </styleClass>
+            <font>
+                <Font name="Calibri Bold" size="18.0" />
+            </font>
+        </Button>
+        <Label layoutX="549.0" layoutY="145.0" prefHeight="68.0" prefWidth="469.0" text="AJOUTER UN COMMANDE" textFill="#ffff16">
+            <font>
+                <Font name="Calibri Bold" size="32.0" />
+            </font>
+            <padding>
+                <Insets top="30.0" />
+            </padding>
+        </Label>
+        <Label alignment="CENTER" layoutX="450.0" layoutY="256.0" prefHeight="13.0" prefWidth="52.0" text="dateC :" textFill="#bfba29">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <TextField fx:id="quanitite" layoutX="572.0" layoutY="305.0" prefHeight="25.0" prefWidth="303.0" promptText="Quantite" style="-fx-border-color: #bfba29;" stylesheets="@../java/values/style.css">
+            <styleClass>
+                <String fx:value="white-bg" />
+                <String fx:value="shadow2" />
+            </styleClass>
+        </TextField>
+        <TextField fx:id="prix" alignment="BOTTOM_LEFT" layoutX="572.0" layoutY="366.0" prefHeight="25.0" prefWidth="303.0" promptText="en dinar " style="-fx-border-color: #bfba29;" styleClass="white-bg" stylesheets="@../java/values/style.css" />
+        <TextField fx:id="total" layoutX="572.0" layoutY="418.0" prefHeight="25.0" prefWidth="303.0" promptText="total..." style="-fx-border-color: #bfba29;" styleClass="white-bg" stylesheets="@../java/values/style.css" />
+        <TextField fx:id="statut" layoutX="572.0" layoutY="473.0" prefHeight="25.0" prefWidth="303.0" promptText="staut.." style="-fx-border-color: #bfba29;" styleClass="white-bg" stylesheets="@../java/values/style.css" />
+        <TextField fx:id="idClient" layoutX="572.0" layoutY="523.0" prefHeight="25.0" prefWidth="303.0" promptText="idClient" style="-fx-border-color: #bfba29;" styleClass="white-bg" stylesheets="@../java/values/style.css" />
+        <Button fx:id="boutonajp" layoutX="849.0" layoutY="597.0" mnemonicParsing="false" onAction="#ajouterc" prefHeight="57.0" prefWidth="203.0" style="-fx-background-color: #fce91a;" text="Ajouter" textFill="WHITE">
+            <stylesheets>
+                <URL value="@values/style2.css" />
+                <URL value="@../java/values/style.css" />
+            </stylesheets>
+            <styleClass>
+                <String fx:value="shadow" />
+                <String fx:value="search-button2" />
+            </styleClass>
+        </Button>
+        <Label layoutX="456.0" layoutY="304.0" prefHeight="27.0" prefWidth="83.0" text="quanitite" textFill="#bfba29">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="456.0" layoutY="365.0" prefHeight="27.0" prefWidth="83.0" text="prix" textFill="#bfba29">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="457.0" layoutY="420.0" prefHeight="21.0" prefWidth="99.0" text="total :" textFill="#bfba29">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="456.0" layoutY="475.0" prefHeight="21.0" prefWidth="83.0" text=" satut :" textFill="#bfba29">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+        <Label layoutX="457.0" layoutY="525.0" prefHeight="21.0" prefWidth="91.0" text="icClient :" textFill="#bfba29">
+            <font>
+                <Font size="15.0" />
+            </font>
+        </Label>
+      <DatePicker fx:id="dateC" layoutX="563.0" layoutY="244.0" prefHeight="26.0" prefWidth="313.0" style="-fx-border-color: #bfba29;" />
+      <ImageView fitHeight="75.0" fitWidth="83.0" layoutX="41.0" layoutY="25.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/474811380_1434186997542102_3264550569770907355_n.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="boutonmodif" layoutX="650.0" layoutY="613.0" mnemonicParsing="false" onAction="#ovrire" text="Button" />
+    </children>
+</AnchorPane>

@@ -1,0 +1,141 @@
+.button
+{
+    -fx-background-color :  #181b22;
+}
+.button:hover
+{
+    -fx-background-color : #8c837c ;
+}
+.button:pressed
+{
+    -fx-background-color : #5a5958 ;
+}
+
+
+
+.table-view .column-header,
+.table-view .column-header-background .filler {
+    -fx-cell-size : 20;
+    -fx-background-color: #ffdc1f;
+}
+.table-view .column-header .label{
+
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-alignment: CENTER_LEFT;
+}
+.table-view .cell{
+    -fx-cell-size: 30;
+    -fx-alignment: center-left;
+    -fx-text-fill: #000000;
+    -fx-alignment: CENTER_LEFT;
+}
+
+.table-row-cell:selected {
+    -fx-background-color:  rgb(127, 172, 243);
+}
+.table-row-cell:selected .text {
+    -fx-fill : white ;
+
+}
+/* scroll bar starts here */
+
+/* The increment and decrement button CSS class of scrollbar */
+.table-view .increment-button ,.table-view .decrement-button {
+    -fx-background-color:transparent;
+    -fx-background-radius: 2em;
+
+}
+
+/* The main scrollbar **track** CSS class  */
+.table-view .scroll-bar:horizontal .track,
+.table-view .scroll-bar:vertical .track{
+    -fx-background-color: transparent;
+    -fx-border-color:derive(  #2D75E8,80%);
+    -fx-background-radius: 2em;
+    -fx-border-radius:2em;
+}
+
+/* The main scrollbar **thumb** CSS class which we drag every time (movable) */
+.table-view .scroll-bar:horizontal .thumb,
+.table-view .scroll-bar:vertical .thumb {
+    -fx-background-color:derive( #2D75E8,90%);
+    -fx-background-insets: 2, 0, 0;
+    -fx-background-radius: 2em;
+
+}
+
+/* chart properties */
+
+.chart {
+    -fx-padding: 10px;
+    -fx-background-color: transparent;
+    -fx-legend-visible: false;
+}
+.chart-plot-background {
+    -fx-background-color:transparent;
+}
+
+.chart-pie {
+    -fx-border-color: derive(-fx-pie-color, 1%);
+    -fx-border-width: 0px;
+}
+
+#arrow:hover{
+    -fx-scale-x: 1.1;
+    -fx-scale-y: 1.1;
+    -fx-scale-z: 1.1;
+}
+
+.scroll-bar {
+    -fx-background-color: #ffffff; /* sets the background color of the scroll bar */
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #4d4d4d; /* sets the color of the thumb (the draggable portion of the scroll bar) */
+}
+
+.scroll-bar .track {
+    -fx-background-color: #e6e6e6; /* sets the color of the track (the portion of the scroll bar that the thumb moves along) */
+}
+
+.modal-dialog-glass {
+    -fx-effect: dropshadow(three-pass-box, derive(rgba(0,0,0,0.3), -20%), 10, 0, 4, 4);
+    -fx-background-color: derive(rgba(0,0,0,0.1), -20%);
+    -fx-background-insets: 12;
+    -fx-background-radius: 6;
+}
+
+.pane_1{
+    -fx-background-color: #e0da63;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-style: solid;
+    -fx-border-color: #e4e38b;
+}
+.pane_2{
+    -fx-background-color: #e0da63;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-style: solid;
+    -fx-border-color: #ffdc1f;
+}
+.pane_3{
+    -fx-background-color: #e4e38b;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-style: solid;
+    -fx-border-color: #e0da63;
+}
+
+.pane_4{
+    -fx-background-color: #ffdc1f;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-border-radius: 20px;
+    -fx-background-radius: 20px;
+    -fx-border-style: solid;
+    -fx-border-color: #ffdc1f;
+}

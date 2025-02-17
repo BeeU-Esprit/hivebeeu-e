@@ -1,0 +1,45 @@
+/* style_commande.css */
+
+/* Style pour le titre */
+#titleLabel {
+    -fx-font-size: 20px;
+    -fx-text-fill: #ffdc1f; /* Couleur vert foncé */
+}
+
+/* Style pour le label d'information */
+#infoLabel {
+    -fx-font-size: 16px;
+    -fx-text-fill: #ffdc1f; /* Couleur vert */
+}
+
+/* Style pour la liste déroulante d'adresse */
+#addressComboBox {
+    -fx-font-size: 14px;
+    -fx-pref-width: 200px; /* Largeur préférée */
+    -fx-background-color: #f0fff0; /* Couleur de fond vert clair */
+}
+
+/* Style pour le bouton de validation */
+#validateButton {
+    -fx-font-size: 18px;
+    -fx-padding: 10px 20px; /* Rembourrage haut et bas de 10px, rembourrage gauche et droit de 20px */
+    -fx-background-color: #ffdc1f; /* Couleur de fond vert */
+    -fx-text-fill: white; /* Couleur du texte blanc */
+    -fx-border-radius: 5px; /* Coins arrondis */
+    -fx-border-color: transparent; /* Couleur de la bordure transparente */
+}
+
+/* Style pour le bouton de retour */
+#backButton {
+    -fx-font-size: 18px;
+    -fx-padding: 10px 20px; /* Rembourrage haut et bas de 10px, rembourrage gauche et droit de 20px */
+    -fx-background-color: #f0fff0; /* Couleur de fond vert clair */
+    -fx-text-fill: #ffdc1f; /* Couleur du texte vert foncé */
+    -fx-border-radius: 5px; /* Coins arrondis */
+    -fx-border-color: #ffdc1f; /* Couleur de la bordure verte foncé */
+}
+.main-content {
+    -fx-background-color: #DFF0D8; /* Vert Bootstrap */
+    -fx-padding: 20px;
+    -fx-border-radius: 10px;
+}

@@ -1,0 +1,235 @@
+.search-box{
+    -fx-background-color: #FFFFFF ;
+    -fx-background-radius: 100;
+}
+.transparent{
+    -fx-background-color: rgba(0,0,0,0);
+}
+.search-button{
+    -fx-background-color: #efea00;
+    -fx-background-radius: 30;
+}
+.right-bar{
+    -fx-background-color: #efea00;
+}
+
+.case_dash{
+    -fx-background-color: #ffdc1f;
+}
+
+.shadow {
+    -fx-effect: dropShadow(three-pass-box, rgba(0,0,0,0.1), 8.0 , 0.0 , 0.0 ,8.0);
+}
+
+.shadow3 {
+    -fx-effect: dropShadow(three-pass-box, derive(#e0da63, 0%), 5.0, 0.0, 0.0, 5.0);
+}
+
+
+.chosen-fruit-card{
+    -fx-background-color: #d6e122;
+    -fx-background-radius: 30;
+}
+
+.generation-menu{
+    -fx-background-color: #d6e122;
+    -fx-background-radius: 30;
+}
+
+.generation-panier{
+    -fx-background-color: #d6e122;
+}
+
+.generation-panier2{
+    -fx-background-color: #ffffff;
+    -fx-background-radius: 5;
+}
+
+
+.generation-buttongold{
+    -fx-background-radius: 5;
+    -fx-background-color: #fff323;
+
+}
+
+.generation-panier3{
+    -fx-background-color: #ffdc1f;
+    -fx-background-radius: 5;
+}
+
+.search-button2{
+    -fx-background-color: #efea00;
+    -fx-background-radius: 30;
+}
+
+.search-button3{
+    -fx-background-color: #828282;
+    -fx-background-radius: 30;
+}
+
+.right-bar2{
+    -fx-background-color: #D3D3D3;
+}
+
+.chosen-fruit-card2{
+    -fx-background-color: #efea00;
+    -fx-background-radius: 30;
+}
+
+.comboBox{
+    -fx-background-color: rgba(255,255,255,0.3);
+    -fx-background-radius: 30;
+}
+
+.comboBox1{
+    -fx-background-color: #c8d597;
+    -fx-background-radius: 30;
+}
+
+.add-btn{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 100;
+}
+
+.free-delivery-card{
+    -fx-background-color: #D3D3D3;
+    -fx-background-radius: 30;
+}
+
+.shopping-online-card{
+    -fx-background-color: #efea00;
+    -fx-background-radius: 30;
+}
+
+.backgroundbleu{
+    -fx-background-color: #efea00;
+    -fx-background-radius: 5;
+
+}
+
+.fruit-item{
+    -fx-background-color: #FFFFFF;
+    -fx-background-radius: 30;
+}
+
+.white-bg{
+    -fx-background-color: #fff;
+}
+
+.radius{
+    -fx-background-radius: 10px;
+}
+
+.shadow2{
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.5),5,0,0,0);
+}
+
+.table-view{
+    -fx-background-color: transparent;
+    -fx-padding: 0;
+    -fx-border-color: #e0da63;
+    -fx-border-radius: 5px;
+    -fx-border-width: 1.5px;
+}
+.table-view .column-header-background{
+    -fx-background-color: #ecf8ff;
+    -fx-background-insets: 0 0 0 0;
+}
+.table-view .column-header, .filter{
+    -fx-background-color: transparent;
+    -fx-cell-size: 40px;
+}
+
+/* Couleurs principales */
+.root {
+    -fx-background-color: #ffffff; /* Fond blanc */
+}
+
+.menu-bar {
+    -fx-background-color: #ffdc1f; /* Bleu roi pour la barre de menu */
+}
+
+.menu-bar .button {
+    -fx-text-fill: #ffffff; /* Texte blanc pour les boutons du menu */
+}
+
+/* Couleurs secondaires */
+.menu-bar .button:hover {
+    -fx-background-color: #c8d597; /* Bleu au survol */
+}
+
+.menu-bar .button:pressed {
+    -fx-background-color: #e4e38b; /* Bleu clair enfoncé */
+}
+
+.round-button {
+    -fx-background-radius: 50;
+    -fx-min-width: 230px;
+    -fx-min-height: 60px;
+    -fx-max-width: 230px;
+    -fx-max-height: 60px;
+    -fx-background-color: #ffdc1f; /* Jaune */
+
+}
+.round-button .button {
+    -fx-text-fill: #ffffff; /* Bleu roi pour le texte */
+}
+/* Couleurs secondaires */
+.round-button .button:hover {
+    -fx-background-color: #e0da63; /* Bleu au survol */
+}
+
+.round-button .button:pressed {
+    -fx-background-color: #e4e38b; /* Bleu clair enfoncé */
+}
+
+.round-buttonMenu {
+    -fx-background-radius: 30;
+    -fx-min-width: 100px;
+    -fx-min-height: 30px;
+    -fx-max-width: 100px;
+    -fx-max-height: 30px;
+    -fx-background-color: #ffdc1f; /* Jaune */
+    -fx-text-fill: #ffffff; /* Bleu roi pour le texte */
+}
+.round-buttonMenu1 {
+    -fx-background-radius: 30;
+    -fx-min-width: 120px;
+    -fx-min-height: 30px;
+    -fx-max-width: 100px;
+    -fx-max-height: 30px;
+    -fx-background-color: #ffdc1f; /* Jaune */
+    -fx-text-fill: #ffffff; /* Bleu roi pour le texte */
+    -fx-font-family: "Walkway Bold", sans-serif;
+}
+.round-buttonMenu1:hover {
+    -fx-background-color: #d6e122; /* Bleu au survol */
+}
+
+.round-buttonMenu1:pressed {
+    -fx-background-color: #e0da63; /* Bleu clair enfoncé */
+}
+
+.table-view{
+    -fx-background-color: #ffdc1f;
+    -fx-border-color: #ffdc1f;
+    -fx-border-radius: 5px ;
+    -fx-border-width: 2px;
+}
+
+.table-view .column-header-background{
+    -fx-background-color: #e0da63;
+    -fx-border-color: #ffdc1f;
+    -fx-border-width: 2px;
+}
+
+.table-view .column-header .label{
+    -fx-text-fill: #ffffff;
+    -fx-font-family: Calibri;
+    -fx-font-size: 15px;
+}
+
+.button-vbox {
+    -fx-alignment: center-right;
+    -fx-margin: 0 300 0 -400;
+}

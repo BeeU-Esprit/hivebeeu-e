@@ -1,0 +1,201 @@
+/* General application styling */
+.main-pane {
+    -fx-background-color: black;
+}
+
+
+
+.logo-image, .cart-image, .login-image {
+    -fx-cursor: hand;
+}
+
+.navbar-labels {
+    -fx-spacing: 15px;
+    -fx-alignment: center;
+}
+
+.navbar-label {
+    -fx-text-fill: black;
+    -fx-font-size: 14px;
+}
+
+/* Main content styling */
+.main-content {
+    -fx-spacing: 20px;
+}
+
+.product-details {
+    -fx-spacing: 10px;
+}
+
+.product-info, .pricing-info {
+    -fx-spacing: 5px;
+}
+
+.product-name, .product-price, .product-quantity, .total-price, .discount-rate, .price-after-discount {
+    -fx-font-size: 14px;
+}
+
+.button-increment, .button-validate {
+    -fx-background-color: #ffdc1f;
+    -fx-text-fill: black;
+    -fx-font-weight: bold;
+}
+
+/* Additional styling for the new layout */
+.section-title {
+    -fx-font-size: 16px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #ffdc1f;
+    -fx-padding: 10px 0;
+}
+
+.pricing-info {
+    -fx-font-size: 14px;
+    -fx-padding: 5px 0;
+}
+
+.cart-details {
+    -fx-spacing: 20px;
+}
+
+.product-details, .pricing-details {
+    -fx-spacing: 10px;
+    -fx-padding: 20px;
+    -fx-background-color: #e8f5e9;
+    -fx-border-radius: 5px;
+    -fx-border-color: #ffdc1f;
+}
+
+.button-order {
+    -fx-background-color: #ffdc1f;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 20px;
+}
+.root {
+    -fx-font-family: "Arial";
+    -fx-base: #ffffff;
+}
+
+.text-field {
+    -fx-font-size: 20px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #333333;
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #666666;
+}
+
+.text-field, .button {
+    -fx-padding: 10px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+}
+
+.button {
+    -fx-background-color: #ffdc1f;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-cursor: hand;
+}
+
+.button:hover {
+    -fx-background-color: #ffdc1f;
+}
+
+#form-title {
+    -fx-alignment: center;
+    -fx-font-size: 24px;
+    -fx-text-fill: #ffdc1f;
+    -fx-underline: true;
+}
+
+.VBox {
+    -fx-spacing: 15px;
+    -fx-alignment: center;
+}
+
+.GridPane {
+    -fx-padding: 20px;
+    -fx-alignment: center;
+}
+
+.HBox {
+    -fx-alignment: center;
+}
+/* Style pour rendre le Spinner plus petit */
+.spinner {
+    -fx-font-size: 10px; /* Taille de la police */
+    -fx-padding: 0.333333em 0.666667em 0.333333em 0.666667em; /* Espacement intérieur */
+    -fx-pref-width: 60px; /* Largeur du Spinner */
+}
+
+.spinner .increment-arrow-button, .spinner .decrement-arrow-button {
+    -fx-padding: 0.25em 0.25em 0.25em 0.25em; /* Espacement intérieur des boutons d'incrémentation/décrémentation */
+    -fx-shape: "M 0,0 L 4,4 L 8,0 Z"; /* Forme des boutons d'incrémentation/décrémentation */
+}
+
+.spinner .text-field {
+    -fx-pref-width: 40px; /* Largeur du champ de texte du Spinner */
+    -fx-padding: 0.166667em 0.333333em 0.166667em 0.333333em; /* Espacement intérieur du champ de texte */
+}
+
+.main-content {
+    -fx-padding: 20px;
+    -fx-background-color: #e8f5e9;
+}
+
+.header-content, .footer-content {
+    -fx-alignment: center;
+}
+
+.header-label {
+    -fx-font-size: 24px;
+    -fx-text-fill: #ffdc1f;
+    -fx-font-weight: bold;
+}
+
+.product-box {
+    -fx-padding: 10px;
+    -fx-border-radius: 5px;
+    -fx-background-color: #ffffff;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 0);
+}
+
+.validate-button {
+    -fx-background-color: #ffdc1f;
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-padding: 10px 50px;
+    -fx-border-radius: 5px;
+}
+
+.validate-button:hover {
+    -fx-background-color: #ffdc1f;
+}
+.my-alert {
+    -fx-background-color: #ffdc1f; /* Couleur de fond */
+}
+
+.custom-alert {
+    -fx-background-color: #f0f0f0;
+    -fx-border-color: #cccccc;
+}
+
+.ok-button {
+    -fx-background-color: #ffdc1f;
+    -fx-text-fill: white;
+}
+
+.cancel-button {
+    -fx-background-color: #f44336;
+    -fx-text-fill: white;
+}
+
+
+
+

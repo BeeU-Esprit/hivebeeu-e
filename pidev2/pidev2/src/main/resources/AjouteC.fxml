@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+
+<AnchorPane prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pidev.Controllers.AjouteC">
+   <children>
+      <Label layoutX="50.0" layoutY="233.0" prefHeight="17.0" prefWidth="135.0" text="total" />
+      <Label layoutX="50.0" layoutY="191.0" prefHeight="17.0" prefWidth="135.0" text="prix" />
+      <Label layoutX="50.0" layoutY="84.0" prefHeight="17.0" prefWidth="135.0" text="produitC" />
+      <Label layoutX="50.0" layoutY="150.0" prefHeight="17.0" prefWidth="135.0" text="quantite" />
+      <Label layoutX="50.0" layoutY="117.0" prefHeight="17.0" prefWidth="135.0" text="dateC" />
+      <TextField fx:id="produitCTextField" layoutX="150.0" layoutY="80.0" style="-fx-border-color: #F2D33A;" />
+      <Label layoutX="50.0" layoutY="281.0" prefHeight="17.0" prefWidth="135.0" text="statut" />
+      <TextField fx:id="prixTextField" layoutX="151.0" layoutY="196.0" style="-fx-border-color: #F2D33A;" />
+      <TextField fx:id="totalTextField" layoutX="152.0" layoutY="238.0" style="-fx-border-color: #F2D33A;" />
+      <TextField fx:id="statutTextField" layoutX="151.0" layoutY="277.0" style="-fx-border-color: #F2D33A;" />
+      <Button fx:id="typeactivitetextfield" cancelButton="true" layoutX="409.0" layoutY="299.0" mnemonicParsing="false" onAction="#ajouteCommande" prefHeight="32.0" prefWidth="95.0" style="-fx-background-color: #F2D33A;" text="Ajouter">
+         <textFill>
+            <RadialGradient centerX="0.44247786766659897" centerY="0.4507575685327703" radius="0.5">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="0.5980331301689148" green="0.7473683953285217" blue="0.05812865495681763" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color />
+                     </color>
+                  </Stop>
+               </stops>
+            </RadialGradient>
+         </textFill>
+      </Button>
+      <DatePicker fx:id="dateCTextField" layoutX="138.0" layoutY="122.0" style="-fx-background-color: #F2D33A;" />
+      <TextField fx:id="quantiteTextField" layoutX="164.0" layoutY="159.0" style="-fx-border-color: #F2D33A;" />
+   </children>
+</AnchorPane>

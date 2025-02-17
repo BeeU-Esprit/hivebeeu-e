@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.String?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="730.0" prefWidth="1300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="edu.pidev.Controllers.ListeCommandeBack">
+   <children>
+      <ImageView fitHeight="730.0" fitWidth="1300.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@img/listepro.png" />
+         </image>
+      </ImageView>
+      <TableView fx:id="TableProduit" layoutX="373.0" layoutY="262.0" prefHeight="333.0" prefWidth="685.0" styleClass="shadow2" stylesheets="@../java/values/style.css">
+        <columns>
+               <TableColumn fx:id="RP" prefWidth="100.0" text="Réference" />
+               <TableColumn fx:id="NP" prefWidth="100.0" text="Nom" />
+               <TableColumn fx:id="PP" minWidth="3.0" prefWidth="100.0" text="Prix" />
+               <TableColumn fx:id="DateP" minWidth="0.0" prefWidth="100.0" text="Date" />
+               <TableColumn fx:id="SP" prefWidth="100.0" text="Stock" />
+               <TableColumn fx:id="DP" minWidth="0.0" prefWidth="100.0" text="Description" />
+               <TableColumn fx:id="SuppressionP" prefWidth="100.0" text="  " />
+               <TableColumn fx:id="ModificationP" prefWidth="100.0" text="  " />
+        </columns>
+       </TableView>
+
+            <Label layoutX="533.0" layoutY="182.0" text="LISTE DES PRODUITS" textFill="#f9b13d" underline="true">
+         <font>
+            <Font name="Calibri Bold" size="40.0" />
+         </font>
+      </Label>
+      <Button fx:id="ButtonAccueil" layoutX="14.0" layoutY="29.0" mnemonicParsing="false" onAction="#Home" prefHeight="75.0" prefWidth="83.0" stylesheets="@../java/values/style.css" textFill="WHITE">
+
+         <styleClass>
+            <String fx:value="transparent" />
+            <String fx:value="shadow2" />
+         </styleClass>
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonListeP" layoutX="14.0" layoutY="199.0" mnemonicParsing="false" onAction="#listP" prefHeight="46.0" prefWidth="83.0" stylesheets="@../java/values/style.css" textFill="WHITE">
+         <styleClass>
+            <String fx:value="transparent" />
+            <String fx:value="shadow2" />
+         </styleClass>
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonAjouterP" layoutX="14.0" layoutY="294.0" mnemonicParsing="false" onAction="#ajP" prefHeight="46.0" prefWidth="83.0" stylesheets="@../java/values/style.css" textFill="WHITE">
+         <styleClass>
+            <String fx:value="transparent" />
+            <String fx:value="shadow2" />
+         </styleClass>
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="ButtonListeV" layoutX="28.0" layoutY="389.0" mnemonicParsing="false" onAction="#listV" prefHeight="46.0" prefWidth="56.0" stylesheets="@../java/values/style.css" textFill="WHITE">
+         <styleClass>
+            <String fx:value="transparent" />
+            <String fx:value="shadow2" />
+         </styleClass>
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Button>
+      <Button fx:id="buttonstatistiqueP" layoutX="14.0" layoutY="481.0" mnemonicParsing="false" onAction="#showStatP" prefHeight="56.0" prefWidth="83.0" stylesheets="@../java/values/style.css" textFill="WHITE">
+         <styleClass>
+            <String fx:value="transparent" />
+            <String fx:value="shadow2" />
+         </styleClass>
+         <font>
+            <Font name="Calibri Bold" size="18.0" />
+         </font>
+      </Button>
+   </children>
+</AnchorPane>

@@ -1,0 +1,30 @@
+.side_ankerpane{
+    -fx-background-color: #ffdc1f;
+    -fx-border-color: #ffdc1f;
+    -fx-border-width: 2px 2px 2px 2px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-style: solid;
+}
+
+.side_ankerpane_blanc{
+    -fx-background-color: #efea00;
+    -fx-border-width: 1px 1px 1px 1px;
+    -fx-background-radius: 5px;
+    -fx-border-radius: 5px;
+    -fx-border-style: solid;
+}
+
+.button {
+    padding: 0.9em 1.8em;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 4px;
+    color: transparent;
+    border: 3px solid #ff0;
+    font-size: 14px;
+    position: relative;
+    font-family: inherit;
+    background: transparent;
+}
+

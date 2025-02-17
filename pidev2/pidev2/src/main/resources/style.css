@@ -1,0 +1,29 @@
+/* styles.css */
+.root {
+    -fx-background-color: white;
+}
+
+.label {
+    -fx-text-fill: #FFA500; /* Orange pour les labels */
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+.text-field {
+    -fx-background-color: white;
+    -fx-border-color: #FFA500; /* Bordure orange */
+    -fx-border-radius: 5px;
+    -fx-padding: 5px;
+}
+
+.button {
+    -fx-background-color: #FFA500; /* Fond orange */
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+    -fx-border-radius: 5px;
+    -fx-padding: 10px 20px;
+}
+
+.button:hover {
+    -fx-background-color: #FF8C00; /* Orange plus foncé au survol */
+}
