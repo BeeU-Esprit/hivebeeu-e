@@ -1,0 +1,99 @@
+package tn.esprit.services;
+
+import tn.esprit.models.Paiement;
+import tn.esprit.util.DBConnection;
+
+import java.sql.*;
+import java.util.ArrayList;
+import java.util.List;
+
+public class PaiementService {
+    private final Connection connection;
+
+    public PaiementService() {
+        this.connection = DBConnection.getConnection();
+    }
+
+    public Paiement getPaiementById(int idCommande) {
+        String query = "SELECT * FROM paiement WHERE idCommande = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(query)) {
+            pstmt.setInt(1, idCommande);
+            ResultSet rs = pstmt.executeQuery();
+            if (rs.next()) {
+                return new Paiement(
+                        rs.getInt("idCommande"),
+                        rs.getInt("idUtilisateur"),
+                        rs.getDouble("montant"),
+                        rs.getString("modeDePaiement"),
+                        rs.getDate("dateDePaiement").toLocalDate(),
+                        rs.getString("status")
+                );
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return null;
+    }
+
+    public void effectuerPaiement(Paiement paiement) {
+        String query = "INSERT INTO paiement (idCommande, idUtilisateur, montant, modeDePaiement, dateDePaiement, status) VALUES (?, ?, ?, ?, ?, ?)";
+        try (PreparedStatement pstmt = connection.prepareStatement(query, Statement.RETURN_GENERATED_KEYS)) {
+            pstmt.setInt(1, paiement.getIdCommande());
+            pstmt.setInt(2, paiement.getIdUtilisateur());
+            pstmt.setDouble(3, paiement.getMontant());
+            pstmt.setString(4, paiement.getModeDePaiement());
+            pstmt.setDate(5, Date.valueOf(paiement.getDateDePaiement()));
+            pstmt.setString(6, paiement.getStatus());
+            pstmt.executeUpdate();
+
+            // Retrieve the generated ID and update the object
+            ResultSet generatedKeys = pstmt.getGeneratedKeys();
+            if (generatedKeys.next()) {
+                paiement.setIdPaiement(generatedKeys.getInt(1));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void modifierPaiement(Paiement paiement) {
+        String query = "UPDATE paiement SET status = ? WHERE idCommande = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(query)) {
+            pstmt.setString(1, paiement.getStatus());
+            pstmt.setInt(2, paiement.getIdCommande());
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public void supprimerPaiement(int idCommande) {
+        String query = "DELETE FROM paiement WHERE idCommande = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(query)) {
+            pstmt.setInt(1, idCommande);
+            pstmt.executeUpdate();
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+    }
+
+    public List<Paiement> getAllPaiements() {
+        List<Paiement> paiements = new ArrayList<>();
+        String query = "SELECT * FROM paiement";
+        try (Statement stmt = connection.createStatement(); ResultSet rs = stmt.executeQuery(query)) {
+            while (rs.next()) {
+                paiements.add(new Paiement(
+                        rs.getInt("idCommande"),
+                        rs.getInt("idUtilisateur"),
+                        rs.getDouble("montant"),
+                        rs.getString("modeDePaiement"),
+                        rs.getDate("dateDePaiement").toLocalDate(),
+                        rs.getString("status")
+                ));
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return paiements;
+    }
+}
