@@ -50,7 +50,33 @@ public class CommandeController {
         loadProduits();
         loadCommandes();
         commandeStatus.getItems().addAll("Pending", "Validated", "Canceled");
+
+        // Add listener to populate fields when selecting a commande
+        commandeList.getSelectionModel().selectedItemProperty().addListener((obs, oldSelection, newSelection) -> {
+            if (newSelection != null) {
+                populateCommandeFields(newSelection);
+            }
+        });
     }
+
+    private void populateCommandeFields(String selectedCommande) {
+        try {
+            // Extracting the ID from the string "Commande #12 - Validated"
+            int idCommande = Integer.parseInt(selectedCommande.split("#")[1].split(" - ")[0].trim());
+
+            // Fetch the full commande details
+            Commande commande = commandeService.getCommandeById(idCommande);
+            if (commande != null) {
+                commandeUtilisateur.setText(String.valueOf(commande.getIdUtilisateur())); // Set user ID
+                commandeDate.setValue(commande.getDateDeCommande()); // Set date
+                commandeStatus.setValue(commande.getStatus()); // Set status
+            }
+        } catch (Exception e) {
+            showAlert("Erreur", "Impossible de charger les détails de la commande.");
+        }
+    }
+
+
 
     private void loadProduits() {
         produitListView.getItems().clear();
@@ -113,6 +139,12 @@ public class CommandeController {
 
 
 
+    @FXML
+    private void refreshCommandes() {
+        System.out.println("🔄 Rafraîchissement des commandes...");
+        loadCommandes(); // Reloads the list of commandes
+        showAlert("Info", "Liste des commandes rafraîchie avec succès !");
+    }
 
     @FXML
     private void modifierCommande() {

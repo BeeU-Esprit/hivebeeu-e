@@ -7,6 +7,8 @@ import java.sql.*;
 import java.util.ArrayList;
 import java.util.List;
 
+import static tn.esprit.util.DBConnection.connection;
+
 public class PaiementService {
     private final Connection connection;
 
@@ -56,16 +58,6 @@ public class PaiementService {
         }
     }
 
-    public void modifierPaiement(Paiement paiement) {
-        String query = "UPDATE paiement SET status = ? WHERE idCommande = ?";
-        try (PreparedStatement pstmt = connection.prepareStatement(query)) {
-            pstmt.setString(1, paiement.getStatus());
-            pstmt.setInt(2, paiement.getIdCommande());
-            pstmt.executeUpdate();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
-    }
 
     public void supprimerPaiement(int idCommande) {
         String query = "DELETE FROM paiement WHERE idCommande = ?";
@@ -95,5 +87,28 @@ public class PaiementService {
             e.printStackTrace();
         }
         return paiements;
+    }
+
+    public void modifierPaiement(Paiement paiement) {
+        String query = "UPDATE paiement SET idUtilisateur = ?, montant = ?, modeDePaiement = ?, dateDePaiement = ?, status = ? WHERE idCommande = ?";
+        try (PreparedStatement pstmt = connection.prepareStatement(query)) {
+            pstmt.setInt(1, paiement.getIdUtilisateur());
+            pstmt.setDouble(2, paiement.getMontant());
+            pstmt.setString(3, paiement.getModeDePaiement());
+            pstmt.setDate(4, Date.valueOf(paiement.getDateDePaiement()));
+            pstmt.setString(5, paiement.getStatus());
+            pstmt.setInt(6, paiement.getIdCommande());
+
+            int rowsAffected = pstmt.executeUpdate();
+
+            if (rowsAffected > 0) {
+                System.out.println("✅ Paiement updated successfully.");
+            } else {
+                System.out.println("❌ No rows updated. Check if idCommande exists.");
+            }
+
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
     }
 }

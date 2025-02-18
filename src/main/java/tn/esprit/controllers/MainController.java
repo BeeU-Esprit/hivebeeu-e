@@ -31,6 +31,11 @@ public class MainController {
         loadScene(event, "/views/PaiementView.fxml");
     }
 
+    @FXML
+    private void goToBackOffice(ActionEvent event) {
+        loadScene(event, "/views/BackView.fxml");
+    }
+
     private void loadScene(ActionEvent event, String fxmlFile) {
         try {
             FXMLLoader loader = new FXMLLoader(getClass().getResource(fxmlFile));
