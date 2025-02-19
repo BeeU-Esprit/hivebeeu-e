@@ -1,0 +1,58 @@
+/* Style général pour tous les boutons */
+Button {
+    -fx-font-size: 14px;
+    -fx-font-family: "Segoe UI", sans-serif;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-padding: 8px 16px;
+    -fx-border-radius: 5px;
+    -fx-background-radius: 5px;
+    -fx-border-width: 2px;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.2), 5, 0, 2, 2);
+}
+
+/* Bouton "Valider" - Orange (#e1a12f) */
+#validerPaiementButton {
+    -fx-background-color: #e1a12f;
+    -fx-border-color: #c77f24;
+}
+
+#validerPaiementButton:hover {
+    -fx-background-color: #c77f24;
+}
+
+#validerPaiementButton:pressed {
+    -fx-background-color: #b46a1b;
+    -fx-border-color: #9e5717;
+}
+
+/* Bouton "Rejeter" - Orange (#e1a12f) */
+#rejeterPaiementButton {
+    -fx-background-color: #e1a12f;
+    -fx-border-color: #c77f24;
+}
+
+#rejeterPaiementButton:hover {
+    -fx-background-color: #c77f24;
+}
+
+#rejeterPaiementButton:pressed {
+    -fx-background-color: #b46a1b;
+    -fx-border-color: #9e5717;
+}
+
+/* Bouton "Retour" - Orange (#e1a12f) */
+#backButton {
+    -fx-background-color: #e1a12f;
+    -fx-border-color: #c77f24;
+}
+
+#backButton:hover {
+    -fx-background-color: #c77f24;
+}
+
+#backButton:pressed {
+    -fx-background-color: #b46a1b;
+    -fx-border-color: #9e5717;
+}

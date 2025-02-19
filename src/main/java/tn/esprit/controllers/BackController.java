@@ -56,16 +56,8 @@ public class BackController implements Initializable {
                             " | Mode: " + item.getModeDePaiement() +
                             " | Status: " + item.getStatus());
 
-                    Button validateButton = new Button("Valider");
-                    validateButton.setOnAction(event -> updatePaiementStatus(item, "Completed"));
-
-                    Button rejectButton = new Button("Rejeter");
-                    rejectButton.setOnAction(event -> updatePaiementStatus(item, "Failed"));
-
-                    HBox buttonsLayout = new HBox(validateButton, rejectButton);
-                    buttonsLayout.setSpacing(10);
-
-                    VBox layout = new VBox(infoLabel, buttonsLayout);
+                    // Just display the information without the action buttons in the ListView
+                    VBox layout = new VBox(infoLabel);
                     layout.setSpacing(10);
 
                     setGraphic(layout);
@@ -146,35 +138,5 @@ public class BackController implements Initializable {
         } catch (IOException e) {
             e.printStackTrace();
         }
-    }
-
-    public void updatePaiementStatus(String selectedPaiementDetails, String newStatus) {
-        try {
-            // Extracting information from selectedPaiementDetails
-            String[] details = selectedPaiementDetails.split("\\|");
-            int idUtilisateur = Integer.parseInt(details[0].split(":")[1].trim());
-
-            // Updating the status in the database
-            String query = "UPDATE paiement SET status = ? WHERE idUtilisateur = ?";
-            PreparedStatement pstmt = connection.prepareStatement(query);
-            pstmt.setString(1, newStatus);
-            pstmt.setInt(2, idUtilisateur);
-            pstmt.executeUpdate();
-
-            // Reload the list to reflect changes
-            loadPaiements();
-
-            // Show success message
-            showAlert("Succès", "Le paiement a été mis à jour avec succès!");
-
-        } catch (SQLException e) {
-            showAlert("Erreur", "Impossible de mettre à jour le paiement: " + e.getMessage());
-        } catch (NumberFormatException | ArrayIndexOutOfBoundsException e) {
-            showAlert("Erreur", "Format de données incorrect dans la liste des paiements.");
-        }
-    }
-
-
-    public void updatePaiementStatut(ActionEvent actionEvent) {
     }
 }

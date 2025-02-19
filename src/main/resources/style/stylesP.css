@@ -1,0 +1,40 @@
+/* Style général des boutons */
+.button {
+    -fx-font-family: 'Segoe UI';
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: white;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px 16px;
+    -fx-background-size: 16px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left 10px center;
+    -fx-padding-left: 40px; /* Décale le texte pour éviter l'icône */
+}
+
+/* Bouton Ajouter */
+.button-ajouter {
+    -fx-background-color: #000000; /* Noir */
+    -fx-border-color: transparent;
+    -fx-border-width: 2px;
+}
+
+/* Bouton Modifier */
+.button-modifier {
+    -fx-background-color: #e1a12f; /* Orange */
+    -fx-border-color: transparent;
+    -fx-border-width: 2px;
+}
+
+/* Bouton Supprimer */
+.button-supprimer {
+    -fx-background-color: #dc3545; /* Rouge */
+    -fx-border-color: transparent;
+    -fx-border-width: 2px;
+}
+
+/* Effet lorsqu'un bouton est cliqué */
+.button:focused {
+    -fx-border-color: #4CAF50; /* Vert */
+    -fx-border-width: 3px;
+}

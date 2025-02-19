@@ -1,0 +1,38 @@
+/* Style général des boutons */
+.button {
+    -fx-font-family: 'Segoe UI';
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+    -fx-text-fill: black;
+    -fx-border-radius: 5px;
+    -fx-padding: 8px 16px;
+    -fx-background-size: 16px;
+    -fx-background-repeat: no-repeat;
+    -fx-background-position: left 10px center;
+    -fx-padding-left: 40px; /* Décale le texte pour éviter l'icône */
+}
+
+/* Bouton Ajouter */
+.button-ajouter {
+    -fx-background-color: #28a745;
+}
+
+/* Bouton Modifier */
+.button-modifier {
+    -fx-background-color: #e1a12f;
+}
+
+/* Bouton Supprimer */
+.button-supprimer {
+    -fx-background-color: #dc3545;
+}
+
+/* Bouton Rafraîchir */
+.button-refresh {
+    -fx-background-color: #f6bf32;
+}
+
+/* Style au survol */
+.button:hover {
+    -fx-opacity: 0.8;
+}

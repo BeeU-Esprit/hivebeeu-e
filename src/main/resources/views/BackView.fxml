@@ -1,20 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns:fx="http://javafx.com/fxml" fx:controller="tn.esprit.controllers.BackController">
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+
+<AnchorPane prefHeight="533.0" prefWidth="802.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.BackController">
     <children>
-        <VBox spacing="10" alignment="CENTER">
-            <Label text="Gestion des Paiements" style="-fx-font-size: 18px; -fx-font-weight: bold;" />
+        <ImageView fitHeight="533.0" fitWidth="802.0">
+            <image>
+                <Image url="@../Images/interface-paiement.png" />
+            </image>
+        </ImageView>
 
-            <ListView fx:id="paiementListView" prefHeight="200" prefWidth="300" />
+        <!-- Title Label -->
+        <Label layoutX="244.0" layoutY="62.0" style="-fx-font-size: 18px; -fx-font-weight: bold;" text="Gestion des Paiements" />
 
-            <HBox spacing="10" alignment="CENTER">
-                <Button fx:id="validerPaiementButton" text="Valider" onAction="#validerPaiement" />
-                <Button fx:id="rejeterPaiementButton" text="Rejeter" onAction="#rejeterPaiement" />
-            </HBox>
+        <!-- ListView for payments -->
+        <ListView fx:id="paiementListView" layoutX="103.0" layoutY="122.0" prefHeight="264.0" prefWidth="607.0" />
 
-            <Button fx:id="backButton" text="Retour" onAction="#goToBackInterface" />
-        </VBox>
+        <!-- HBox to hold the buttons aligned to the right -->
+        <HBox alignment="CENTER_RIGHT" layoutX="529.0" layoutY="420.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="54.0" prefWidth="191.0" spacing="10">
+            <!-- Only one 'Valider' and 'Rejeter' button -->
+            <Button fx:id="validerPaiementButton" onAction="#validerPaiement" prefHeight="26.0" prefWidth="66.0" style="-fx-background-color: #e1a12f; -fx-font-weight: bold;" text="Valider" textFill="WHITE" />
+            <Button fx:id="rejeterPaiementButton" onAction="#rejeterPaiement" prefHeight="26.0" prefWidth="78.0" style="-fx-background-color: #f6bf32; -fx-font-weight: bold;" text="Rejeter" textFill="WHITE" />
+        </HBox>
+
+        <!-- Back Button -->
+        <Button fx:id="backButton" layoutX="63.0" layoutY="49.0" onAction="#goToBackInterface" style="-fx-font-weight: bold; -fx-background-color: #f6bf32;" text="Retour" />
     </children>
 </AnchorPane>
