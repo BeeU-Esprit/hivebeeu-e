@@ -9,13 +9,14 @@
 <?import javafx.scene.text.Font?>
 
 <AnchorPane prefHeight="500.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="tn.esprit.controllers.MainController">
-   <ImageView fitHeight="500.0" fitWidth="800.0" layoutY="-2.0">
+   <ImageView fitHeight="487.0" fitWidth="790.0" layoutX="10.0" layoutY="10.0">
       <image>
-         <Image url="@/Images/Orange and Black Modern Bold Sport Presentation (2).png" />
+         <Image url="@../Images/interface-main.png" />
       </image>
    </ImageView>
+   <ImageView fitHeight="500.0" fitWidth="800.0" layoutY="-2.0" />
 
-    <VBox alignment="CENTER" layoutX="152.0" layoutY="87.0" prefHeight="298.0" prefWidth="453.0" spacing="20">
+    <VBox alignment="CENTER" layoutX="197.0" layoutY="137.0" prefHeight="298.0" prefWidth="453.0" spacing="20">
         <Label style="-fx-font-size: 24px; -fx-font-weight: bold;" text="Tableau de Bord">
          <font>
             <Font name="Arial" size="12.0" />

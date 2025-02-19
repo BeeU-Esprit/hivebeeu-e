@@ -1,11 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -25,42 +22,19 @@
 
     <VBox alignment="CENTER" layoutX="35.0" layoutY="108.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="734.0" prefWidth="758.0" spacing="20">
 
-        <VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="410.0" prefWidth="339.0" spacing="10">
-            <Label style="-fx-font-size: 14px; -fx-font-family: 'Segoe UI';" text="ID Commande:" />
-            <TextField fx:id="paiementCommandeId" promptText="Entrez l'ID de la commande" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" />
-
-            <Label style="-fx-font-size: 14px; -fx-font-family: 'Segoe UI';" text="ID Utilisateur:" />
-            <TextField fx:id="paiementUtilisateurId" promptText="Entrez l'ID de l'utilisateur" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" />
-
-            <Label style="-fx-font-size: 14px; -fx-font-family: 'Segoe UI';" text="Montant:" />
-            <TextField fx:id="paiementMontant" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="34.0" prefWidth="338.0" promptText="Entrez le montant du paiement" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" />
-
-            <Label style="-fx-font-size: 14px; -fx-font-family: 'Segoe UI';" text="Mode de Paiement:" />
-            <ComboBox fx:id="paiementMode" prefHeight="28.0" prefWidth="344.0" promptText="Sélectionnez un mode de paiement" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" />
-
-            <Label style="-fx-font-size: 14px; -fx-font-family: 'Segoe UI';" text="Date de Paiement:" />
-            <DatePicker fx:id="paiementDate" prefHeight="28.0" prefWidth="343.0" promptText="Choisissez la date de paiement" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" />
-
-            <Label style="-fx-font-size: 14px; -fx-font-family: 'Segoe UI';" text="Statut:" />
-            <ComboBox fx:id="paiementStatus" prefHeight="28.0" prefWidth="342.0" promptText="Sélectionnez le statut du paiement" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" />
-        </VBox>
-
-        <HBox alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="431.0" spacing="20">
-         <children>
-               <Button onAction="#effectuerPaiement" style="-fx-background-color: #ffffff; -fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-text-fill: black; -fx-font-weight: bold; -fx-border-radius: 5px;" text="Effectuer Paiement" />
-               <Button onAction="#modifierPaiement" prefHeight="28.0" prefWidth="84.0" style="-fx-background-color: #e1a12f; -fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-radius: 5px;" text="Modifier" />
-               <Button onAction="#supprimerPaiement" style="-fx-background-color: #dc3545; -fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-radius: 5px;" text="Supprimer" />
-         </children>
-        </HBox>
-
-        <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" text="Liste des Commandes Disponibles:" textAlignment="RIGHT" />
-        <ListView fx:id="commandeListView" maxWidth="-Infinity" prefHeight="110.0" prefWidth="546.0" style="-fx-font-family: 'Segoe UI'; -fx-border-color: #999; -fx-border-radius: 5px;" />
-
         <Label maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" text="Liste des Paiements:">
          <font>
             <Font size="24.0" />
          </font></Label>
-        <ListView fx:id="paiementList" maxWidth="-Infinity" prefHeight="118.0" prefWidth="550.0" style="-fx-font-family: 'Segoe UI'; -fx-border-color: #999; -fx-border-radius: 5px;" />
+        <ListView fx:id="paiementList" maxWidth="-Infinity" prefHeight="449.0" prefWidth="470.0" style="-fx-font-family: 'Segoe UI'; -fx-border-color: #999; -fx-border-radius: 5px;" />
+
+        <HBox alignment="CENTER" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="28.0" prefWidth="431.0" spacing="20">
+         <children>
+            <Button fx:id="AjPa" mnemonicParsing="false" onAction="#gotoPa" prefHeight="30.0" prefWidth="153.0" style="-fx-font-size: 14px; -fx-font-family: -fx-background-color; -fx-background-color: #ffffff; -fx-border-radius: 5px; -fx-font-weight: bold; -fx-text-fill: black;" text="Effectuer Paiement" />
+            <Button fx:id="modifP" mnemonicParsing="false" onAction="#gotomodif" style="-fx-font-size: 14px; -fx-font-family: 'Segoe UI'; -fx-background-color: #e1a12f; -fx-border-radius: 5px; -fx-font-weight: bold; -fx-font-weight: white;" text="modifier" />
+               <Button onAction="#supprimerPaiement" style="-fx-background-color: #dc3545; -fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-text-fill: white; -fx-font-weight: bold; -fx-border-radius: 5px;" text="Supprimer" />
+         </children>
+        </HBox>
     </VBox>
      <Label layoutX="276.0" layoutY="18.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="35.0" prefWidth="306.0" style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-font-family: 'Baskerville Old Face';" text="Gestion des Paiements" textFill="WHITE" />
 </AnchorPane>

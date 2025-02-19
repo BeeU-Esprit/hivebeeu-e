@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+
+<AnchorPane prefHeight="866.0" prefWidth="832.0" style="-fx-background-color: #E6F7FF;"
+            xmlns="http://javafx.com/javafx/23.0.1"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="tn.esprit.controllers.AjoutPaiement">
+
+    <!-- Background Image -->
+    <ImageView fitHeight="871.0" fitWidth="837.0" layoutY="-6.0">
+        <image>
+            <Image url="@/Images/Orange and Black Modern Bold Sport Presentation (7).png" />
+        </image>
+    </ImageView>
+
+    <!-- Back Button -->
+    <Button layoutX="14.0" layoutY="14.0" onAction="#goBack"
+            style="-fx-background-color: #e1a12f; -fx-text-fill: white; -fx-font-family: 'Segoe UI';
+                   -fx-font-size: 14px; -fx-border-radius: 5px;"
+            text="Back" />
+
+    <!-- VBox for Payment Form -->
+    <VBox layoutX="35.0" layoutY="108.0" prefHeight="734.0" prefWidth="758.0" spacing="20">
+
+        <Label text="Liste des Paiements:" style="-fx-font-size: 14px;" />
+
+        <!-- List of Orders -->
+        <ListView fx:id="commandeListView" prefHeight="110.0" prefWidth="546.0"
+                  style="-fx-font-family: 'Segoe UI'; -fx-border-color: #999; -fx-border-radius: 5px;" />
+
+        <!-- Payment Fields -->
+        <TextField fx:id="paiementCommandeId" promptText="Commande ID"
+                   style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" />
+
+        <TextField fx:id="paiementUtilisateurId" promptText="Utilisateur ID"
+                   style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" />
+
+        <TextField fx:id="paiementMontant" promptText="Montant (TND)"
+                   style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" />
+
+        <ComboBox fx:id="paiementMode" prefHeight="28.0" prefWidth="344.0"
+                  promptText="Sélectionnez un mode de paiement"
+                  style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" />
+
+        <DatePicker fx:id="paiementDate" prefHeight="28.0" prefWidth="344.0"
+                    promptText="Sélectionnez la date du paiement"
+                    style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" />
+
+        <ComboBox fx:id="paiementStatus" prefHeight="28.0" prefWidth="342.0"
+                  promptText="Sélectionnez le statut du paiement"
+                  style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" />
+
+        <!-- Button to Process Payment -->
+        <Button onAction="#effectuerPaiement" text="Effectuer Paiement"
+                style="-fx-background-color: #ffffff; -fx-font-size: 14px; -fx-font-weight: bold;" />
+
+        <!-- List of Payments -->
+        <Label text="Paiements enregistrés:" style="-fx-font-size: 14px;" />
+        <ListView fx:id="paiementList" prefHeight="150.0" prefWidth="546.0"
+                  style="-fx-font-family: 'Segoe UI'; -fx-border-color: #999; -fx-border-radius: 5px;" />
+
+    </VBox>
+</AnchorPane>

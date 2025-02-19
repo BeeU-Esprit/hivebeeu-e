@@ -1,13 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.String?>
-<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.Button?>
-<?import javafx.scene.control.ComboBox?>
-<?import javafx.scene.control.DatePicker?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.control.ListView?>
-<?import javafx.scene.control.TextField?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.layout.AnchorPane?>
@@ -27,36 +22,17 @@
         <Label style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-font-family: 'Baskerville Old Face';" text="Gestion des Commandes" textFill="WHITE" />
 
         <HBox alignment="CENTER" spacing="20">
-            <VBox spacing="10">
-                <Label style="-fx-font-size: 14px; -fx-font-family: 'Segoe UI';" text="ID Utilisateur:" />
-                <TextField fx:id="commandeUtilisateur" promptText="Entrez l'ID de l'utilisateur" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" />
-
-                <Label style="-fx-font-size: 14px; -fx-font-family: 'Segoe UI';" text="Date Commande:" />
-                <DatePicker fx:id="commandeDate" promptText="Sélectionnez la date de commande" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;" />
-
-                <Label style="-fx-font-size: 14px; -fx-font-family: 'Segoe UI';" text="Statut:" />
-                <ComboBox fx:id="commandeStatus" prefHeight="28.0" prefWidth="194.0" promptText="Sélectionnez le statut" style="-fx-font-family: 'Segoe UI'; -fx-font-size: 14px;">
-                    <items>
-                        <FXCollections fx:factory="observableArrayList">
-                            <String fx:value="Pending" />
-                            <String fx:value="Validated" />
-                            <String fx:value="Canceled" />
-                        </FXCollections>
-                    </items>
-                </ComboBox>
-            </VBox>
 
             <VBox spacing="10">
-                <Label style="-fx-font-size: 14px; -fx-font-family: 'Segoe UI';" text="Produits Disponibles:" />
-                <ListView fx:id="produitListView" prefHeight="150.0" prefWidth="432.0" style="-fx-font-family: 'Segoe UI';" />
+                <Label style="-fx-font-size: 14px; -fx-font-family: 'Segoe UI';" text="Liste des Commandes" />
             </VBox>
         </HBox>
 
-        <ListView fx:id="commandeList" prefHeight="150.0" prefWidth="400.0" style="-fx-font-family: 'Segoe UI';" />
+        <ListView fx:id="commandeList" prefHeight="282.0" prefWidth="626.0" style="-fx-font-family: 'Segoe UI';" />
 
         <HBox alignment="CENTER" prefHeight="28.0" prefWidth="626.0" spacing="20">
-            <Button onAction="#createCommande" style="-fx-background-color: #ffffff; -fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-font-weight: bold;" text="Ajouter" />
-            <Button onAction="#modifierCommande" style="-fx-background-color: #e1a12f; -fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-font-weight: bold;" text="Modifier" />
+         <Button fx:id="AjC" mnemonicParsing="false" onAction="#gotoAj" style="-fx-background-color: #ffffff; -fx-font-family: 'Segoe UI'; -fx-font-weight: bold; -fx-font-size: 14px;" text="Ajoute" />
+         <Button fx:id="modiff" mnemonicParsing="false" onAction="#gotomodif" style="-fx-font-weight: bold; -fx-font-size: 14px; -fx-font-family: 'Segoe UI'; -fx-background-color: #e1a12f;" text="Modifier" />
             <Button onAction="#supprimerCommande" style="-fx-background-color: #d33; -fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-font-weight: bold;" text="Supprimer" />
             <Button onAction="#refreshCommandes" prefHeight="28.0" prefWidth="111.0" style="-fx-background-color: #f6bf32; -fx-font-family: 'Segoe UI'; -fx-font-size: 14px; -fx-font-weight: bold; -fx-border-radius: 5px; -fx-text-fill: white;" text="Rafraîchir" />
         </HBox>
